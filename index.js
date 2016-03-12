@@ -14,7 +14,7 @@ var query = {
       } );
       return result;
   },
-  jsonToQuery: function(json) {
+  jsonToQuery: function( json ) {
     return "?" +
         Object.keys( json ).map( function( key ) {
             return encodeURIComponent( key ) + "=" +

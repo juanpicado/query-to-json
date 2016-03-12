@@ -1,4 +1,4 @@
-
+var assert = require( "assert" );
 
 var queryTest = require( "../index.js" );
 var query1 = "?param1=foo&param2=bar";
@@ -6,7 +6,7 @@ var object1 = {
   param1: "foo",
   param2: "bar"
 };
-var assert = require( "assert" );
+
 describe( "queryTest", function() {
   describe( "#queryToJson()", function() {
     it( "should return true", function() {
@@ -19,7 +19,7 @@ describe( "queryTest", function() {
   } );
   describe( "#jsonToQuery()", function() {
     it( "should true", function() {
-      assert( queryTest.jsonToQuery(object1) === query1 );
+      assert( queryTest.jsonToQuery( object1 ) === query1 );
     } );
   } );
 } );

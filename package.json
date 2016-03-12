@@ -3,6 +3,16 @@
   "version": "0.0.1",
   "description": "query strings to json",
   "main": "index.js",
+  "license": "MIT",
+  "repository" : "https://github.com/juanpicado/query-to-json",
+  "keywords" : [
+     "query",
+     "url",
+     "json"
+  ],
+  "engines": {
+     "node": ">=0.10.0"
+  },
   "scripts": {
     "test": "mocha"
   },
