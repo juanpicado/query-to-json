@@ -1,0 +1,14 @@
+{
+  "name": "query-to-json",
+  "version": "0.0.1",
+  "description": "query strings to json",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Juan Picado <me@jotadeveloper.com> (http://jotadeveloper.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
