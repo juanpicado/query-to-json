@@ -11,7 +11,6 @@ describe( "queryTest", function() {
   describe( "#queryToJson()", function() {
     it( "should return true", function() {
       var result = queryTest.queryToJson( query1 );
-      console.log( result );
       assert( typeof result === "object" );
       assert( result.param1 === "foo" );
       assert( result.param2 === "bar" );

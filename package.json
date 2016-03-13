@@ -1,6 +1,6 @@
 {
-  "name": "query-to-json",
-  "version": "0.0.2",
+  "name": "query-to-json-es6",
+  "version": "0.0.1",
   "description": "query strings to json",
   "main": "index.js",
   "license": "ISC",
@@ -11,7 +11,7 @@
     "json"
   ],
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.4.0"
   },
   "scripts": {
     "test": "mocha"

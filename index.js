@@ -1,26 +1,24 @@
 
-
 "use strict";
 
-var query = {
-  queryToJson: function( query ) {
-      var result = {};
+module.exports = {
+  queryToJson: ( query ) => {
+      let result = {};
       if ( query.lastIndexOf( "?" ) === 0 ) {
         query = query.substr( 1 );
       }
-      query.split( "&" ).forEach( function( part ) {
-        var item = part.split( "=" );
+      for ( var value of query.split( "&" ) ) {
+        var item = value.split( "=" );
         result[ item[ 0 ] ] = decodeURIComponent( item[ 1 ] );
-      } );
+      }
       return result;
   },
-  jsonToQuery: function( json ) {
-    return "?" +
-        Object.keys( json ).map( function( key ) {
-            return encodeURIComponent( key ) + "=" +
-                encodeURIComponent( json[ key ] );
-        } ).join( "&" );;
+  jsonToQuery: ( json ) => {
+    let url = Object.keys( json ).map( ( i ) => {
+        let key = encodeURIComponent( i );
+        let value = encodeURIComponent( json[ key ] );
+        return `${key}=${value}`;
+    } ).join( "&" );
+    return `?${url}`;
   }
 };
-
-module.exports = query;
