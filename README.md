@@ -4,9 +4,30 @@
 ## Install
 
 ```
-$ npm install --save query-to-json
+$ npm i --save query-to-json
 ```
 
 ## Usage
 
-//todo
+
+##### Query to JSON
+
+    var query = require( "query-to-json" );
+    var parsedQuery = query.queryToJson("?param1=foo&param2=bar");
+    //=> {
+      param1: "foo",
+      param2: "bar"
+    }
+
+##### JSON to Query
+
+    var query = require( "query-to-json" );
+    var object1 = {
+       param1: "foo",
+       param2: "bar"
+    };
+    var parsedQuery = jsonToQuery(object1);
+    
+    //=> "?param1=foo&param2=bar"
+    
+    
